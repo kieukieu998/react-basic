@@ -5,16 +5,10 @@ class MyComponent extends React.Component {
    *  JSX
    *  Fragment
    */
-  state = [
-    {
-      name: '',
-      chanel: 'hoi dan IT'
-    },
-    {
-      name: '',
-      chanel: 'hoi dan IT'
-    }
-  ]
+  state = {
+    name: '',
+    chanel: 'hoi dan IT'
+  }
   handleOnChangeName = (event) =>  {
     this.setState({
       name: event.target.value,
