@@ -5,19 +5,27 @@ class MyComponent extends React.Component {
    *  JSX
    *  Fragment
    */
-  state = {
-    name: 'kieu',
-    chanel: 'hoi dan IT'
-  }
+  state = [
+    {
+      name: '',
+      chanel: 'hoi dan IT'
+    },
+    {
+      name: '',
+      chanel: 'hoi dan IT'
+    }
+  ]
   handleOnChangeName = (event) =>  {
     this.setState({
-      name: event.target.value
+      name: event.target.value,
+      chanel: 'abc'
     })
   }
   handleClickButton = () => {
     alert('click me')
   }
   render() {
+    console.log('>>> call render: ', this.state);
     return(
       <>
       <div className="first">
