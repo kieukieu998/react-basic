@@ -9,6 +9,9 @@ class ChildComponent extends React.Component {
       showJobs: !this.state.showJobs
     })
   }
+  handleOnclickDelete = (job) => {
+    this.props.deleteAJob(job);
+  }
   render() {
     let { arrJobs } = this.props; // destructuring assignment
     let { showJobs } = this.state;
@@ -28,6 +31,9 @@ class ChildComponent extends React.Component {
                     return (
                       <div key={item.id}>
                         {item.title} - {item.salary}
+                        
+                        <span onClick={() => this.handleOnclickDelete(item)}>&nbsp; X</span>
+                        {/* ở đây không truyền item vào bởi vì đã có từ trước trong vòng map. nó ko phải input đầu vào nên không cần truyền vào */}
                       </div>
                     )
                   }
