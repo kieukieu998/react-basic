@@ -31,9 +31,11 @@ class MyComponent extends React.Component {
     this.setState({
       arrJobs: currentJob
     })
-
   }
 
+  componentDidMount() {
+    console.log('>>> run component didMount');
+  }
 
   render() {
     console.log('>> render', this.state);
