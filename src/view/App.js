@@ -1,10 +1,10 @@
 import logo from './logo.svg';
 import './App.scss';
 import MyComponent from './Example/MyComponent';
-import ListTodo from './Example/Todos/ListTodo';
+import ListTodo from './Todos/ListTodo';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Navigation from './Example/Navigation/Navigation';
+import Navigation from './Navigation/Navigation';
 import Home from './Example/Home';
 
 import {
@@ -13,6 +13,7 @@ import {
   Route,
   Link,
 } from "react-router-dom";
+import ListUser from './Users/ListUser';
 
 
 const App = () => {
@@ -33,6 +34,9 @@ const App = () => {
             </Route>
             <Route path='/about'>
               <MyComponent />
+            </Route>
+            <Route path='/user'>
+              <ListUser />
             </Route>
           </Switch>
         </header>

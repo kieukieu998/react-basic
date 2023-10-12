@@ -1,0 +1,26 @@
+.list-user-container {
+  .title {
+    font-size: 20px;
+    margin-bottom: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  .list-user-content {
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    .child {
+      padding: 15px;
+      text-align: left;
+      font-size: 15px;
+      span + span {
+        padding-left: 10px;
+      }
+    }
+    .child + .child {
+      border-top: 1px solid #787878;
+    }
+  }
+
+}
+
