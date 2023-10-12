@@ -3,10 +3,17 @@ import ReactDOM from 'react-dom';
 import App from './view/App';
 import reportWebVitals from './reportWebVitals';
 import './styles/global.scss'
+import { Provider } from 'react-redux'
+import { createStore } from 'redux'
+import rootReducer from './store/reducers/rootReducer';
 
+const reduxStore = createStore(rootReducer)
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    {/* Provider là hàm của react và redux, nó như một thằng cha bọc ngoài nên là truyền vào một store */}
+    <Provider store={reduxStore}>
+      <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
