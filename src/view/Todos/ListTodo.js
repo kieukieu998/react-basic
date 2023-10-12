@@ -35,21 +35,21 @@ class ListTodo extends React.Component {
 
     // save
     // nếu không rỗng 
-    if (isEmptyObj === false && editTodo.id === todo.id ) {
+    if (isEmptyObj === false && editTodo.id === todo.id) {
       let listTodoCopy = [...listTodo];
       let objIndex = listTodoCopy.findIndex(item => item.id === todo.id);
 
       listTodoCopy[objIndex].title = editTodo.title;
 
       this.setState({
-        listTodo : listTodoCopy,
+        listTodo: listTodoCopy,
         editTodo: {}
       })
       toast.success("Update todo success!");
       return;
     }
-     //edit
-     this.setState({
+    //edit
+    this.setState({
       editTodo: todo
     })
 
@@ -69,6 +69,9 @@ class ListTodo extends React.Component {
     let isEmptyObj = Object.keys(editTodo).length === 0;
     return (
       <>
+        <p>
+          Simple todo App with HoiDanIt
+        </p>
         <div className="list-todo-container">
           <AddTodo
             handleAddTodo={this.handleAddTodo}
@@ -85,7 +88,7 @@ class ListTodo extends React.Component {
                     {
                       // nếu nó rỗng
                       isEmptyObj === true ?
-                      // in ra cái này
+                        // in ra cái này
                         <span>{index + 1} - {item.title} </span>
                         :
                         // ngược lại khi nó khác rỗng
@@ -93,10 +96,10 @@ class ListTodo extends React.Component {
                           {
                             // check điều kiện nếu 2 cái này bằng nhau
                             editTodo.id === item.id ?
-                            // thì in cái này
+                              // thì in cái này
                               <span>{index + 1} - <input type="text" value={editTodo.title} onChange={(event) => this.handleOnChangeEditTodo(event)} /></span>
                               :
-                            // ngược lại thì in cái này
+                              // ngược lại thì in cái này
                               <span>{index + 1} - {item.title} </span>
                           }
                         </>
