@@ -1,10 +1,10 @@
 import logo from './logo.svg';
 import './App.scss';
 import MyComponent from './Example/MyComponent';
-import ListTodo from './Todos/ListTodo';
+import ListTodo from './Example/Todos/ListTodo';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Navigation from './Navigation/Navigation';
+import Navigation from './Example/Navigation/Navigation';
 import Home from './Example/Home';
 
 import {
