@@ -7,7 +7,7 @@ import { Provider } from 'react-redux'
 import { createStore } from 'redux'
 import rootReducer from './store/reducers/rootReducer';
 
-const reduxStore = createStore(rootReducer)
+const reduxStore = createStore(rootReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 ReactDOM.render(
   <React.StrictMode>
     {/* Provider là hàm của react và redux, nó như một thằng cha bọc ngoài nên là truyền vào một store */}
